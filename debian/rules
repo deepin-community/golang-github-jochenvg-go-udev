@@ -1,4 +1,11 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang
+
+# The tests for this package require that /dev/zero be initialized by
+# udev, otherwise they will fail. So, only run them if udevd is running.
+# I don't know if there's a nicer way to do this check that will work
+# reliably across containers, chroots, and physical hardware.
+override_dh_auto_test:
+	if command -v udevadm >/dev/null 2>&1; then if udevadm info -n /dev/zero >/dev/null 2>&1; then dh_auto_test; fi; fi

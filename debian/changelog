@@ -1,5 +1,25 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-jochenvg-go-udev (0.0~git20240801.b65ed64-1) unstable; urgency=medium
 
-  * Initial release
+  [ Aloïs Micard ]
+  * update debian/gitlab-ci.yml (using pkg-go-tools/ci-config)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Mathias Gibbens ]
+  * New upstream snapshot
+  * d/control:
+    - Update Standards-Version to 4.7.0 (no changes needed)
+    - Update my email address
+  * Update years in d/copyright
+
+ -- Mathias Gibbens <gibmat@debian.org>  Sat, 10 Aug 2024 22:10:31 +0000
+
+golang-github-jochenvg-go-udev (0.0~git20171110.d6b62d5-2) unstable; urgency=medium
+
+  * Add Depends on libudev-dev
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Sun, 28 Nov 2021 20:03:23 +0100
+
+golang-github-jochenvg-go-udev (0.0~git20171110.d6b62d5-1) unstable; urgency=medium
+
+  * Initial release (Closes: #998122)
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Sat, 20 Nov 2021 15:23:24 +0100
